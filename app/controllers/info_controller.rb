@@ -4,6 +4,7 @@ class InfoController < ApplicationController
   # code. However, they do serve as documentation
   # for our project.
   
+  # This is the root route for the URL /
   def index
   end
   # Loads the app/views/info/index.html.erb
