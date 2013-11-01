@@ -13,5 +13,13 @@ class PostsController < ApplicationController
   
   def create
     # The magic of creation happens here!
+    @post = Post.new(params[:post])
+    if @post.save
+      # redirect to the index action
+      redirect_to :action => :index
+    else
+      # Load up the view associated with the new action.
+      render :action => :new
+    end
   end # On success redirects to index, else uses new.html.erb
 end
